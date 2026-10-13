@@ -2,7 +2,7 @@ export const COMPANY = {
   name: 'The Colony Logistics Ltd',
   shortName: 'The Colony',
   tagline: 'We Keep Business Moving.',
-  phones: ['024 968 2113', '024 412 5366', '054 633 3318'],
+  phones: ['024 968 2113'],
   /** WhatsApp linked to 024 968 2113 */
   whatsapp: '233249682113',
   email: 'admin@thecolonysecurity.com',

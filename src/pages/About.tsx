@@ -216,7 +216,7 @@ export default function About() {
         title="Get to Know The Colony"
         subtitle="Have questions or ready to start? We're just a call or WhatsApp away."
         primaryLabel="Contact Us"
-        primaryLink="/contact"
+        primaryHref="/contact"
       />
     </>
   );

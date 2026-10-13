@@ -2,11 +2,21 @@ export const COMPANY = {
   name: 'The Colony Logistics Ltd',
   shortName: 'The Colony',
   tagline: 'We Keep Business Moving.',
-  phones: ['054 633 3318', '030 394 1642'],
-  whatsapp: '233546333318',
-  email: 'info@thecolonylogistics.com',
-  address: 'H365, 73 Lakeside Road, Nii Amasa Nikoi Avenue, Accra, Ghana',
-  addressShort: 'Lakeside Road, Nii Amasa Nikoi Avenue, Accra, Ghana',
+  phones: ['024 968 2113', '024 412 5366', '054 633 3318'],
+  /** WhatsApp linked to 024 968 2113 */
+  whatsapp: '233249682113',
+  email: 'admin@thecolonysecurity.com',
+  address: 'H365, 73 Lakeside Road, Nii Amasa Nikoi Avenue, Ashaley Botwe',
+  addressShort: 'Ashaley Botwe',
+  area: 'Ashaley Botwe',
+  officeLabel: 'Visit our Accra office: Ashaley Botwe',
+  mapQuery: 'H365, 73 Lakeside Road, Nii Amasa Nikoi Avenue, Ashaley Botwe, Accra, Ghana',
+  mapEmbed:
+    'https://www.google.com/maps?q=H365+73+Lakeside+Road+Nii+Amasa+Nikoi+Avenue+Ashaley+Botwe+Accra+Ghana&hl=en&z=16&output=embed',
+  mapLink:
+    'https://www.google.com/maps/search/?api=1&query=H365+73+Lakeside+Road+Nii+Amasa+Nikoi+Avenue+Ashaley+Botwe+Accra+Ghana',
+  /** Request a Service CTA — opens phone dialer */
+  requestTel: 'tel:+233249682113',
 };
 
 export const NAV_LINKS = [
@@ -110,7 +120,7 @@ export const INDUSTRIES = [
 ];
 
 export const STEPS = [
-  { num: '01', title: 'Reach Out', desc: 'Contact us via phone, WhatsApp, or our online request form to tell us what you need.' },
+  { num: '01', title: 'Reach Out', desc: 'Contact us via phone or WhatsApp to tell us what you need.' },
   { num: '02', title: 'Get a Quote', desc: 'We assess your requirements and provide a clear, transparent quote with no hidden fees.' },
   { num: '03', title: 'We Deliver', desc: 'Our team gets to work — moving your goods or cleaning your spaces with precision and care.' },
   { num: '04', title: 'You Stay Moving', desc: 'Enjoy reliable, professional results that keep your business and life running smoothly.' },

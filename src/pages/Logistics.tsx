@@ -1,13 +1,12 @@
-import { Link } from 'react-router-dom';
 import {
   Truck, Package, Warehouse, MapPin, ShieldCheck, Boxes,
-  ArrowRight, CheckCircle2, Phone, MapPinned, Clock, TrendingUp,
+  ArrowRight, Phone, MapPinned, Clock, TrendingUp,
 } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
 import PageHero from '@/components/PageHero';
 import CTABanner from '@/components/CTABanner';
-import { IMAGES, SERVICES } from '@/data/company';
+import { IMAGES, SERVICES, COMPANY } from '@/data/company';
 
 const iconMap: Record<string, LucideIcon> = {
   Truck, Package, Warehouse, MapPin, ShieldCheck, Boxes,
@@ -62,10 +61,10 @@ export default function Logistics() {
                 every time.
               </p>
               <div className="mt-8">
-                <Link to="/request-service" className="btn-primary">
+                <a href={COMPANY.requestTel} className="btn-primary">
                   Request Logistics Service
                   <ArrowRight className="h-4 w-4" />
-                </Link>
+                </a>
               </div>
             </div>
 
@@ -229,7 +228,6 @@ export default function Logistics() {
         title="Ready to Move With Confidence?"
         subtitle="Get in touch today for a logistics quote. We'll get your goods where they need to go — safely and on time."
         primaryLabel="Request Logistics Service"
-        primaryLink="/request-service"
       />
     </>
   );

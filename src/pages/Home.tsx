@@ -52,10 +52,10 @@ export default function Home() {
               className="mt-8 flex flex-col gap-3 animate-fade-up sm:flex-row"
               style={{ animationDelay: '0.3s' }}
             >
-              <Link to="/request-service" className="btn-gold">
+              <a href={COMPANY.requestTel} className="btn-gold">
                 Book a Service
                 <ArrowRight className="h-4 w-4" />
-              </Link>
+              </a>
               <a href="#divisions" className="btn-secondary">
                 Explore Services
               </a>

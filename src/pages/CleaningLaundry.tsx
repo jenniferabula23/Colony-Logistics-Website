@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import {
   Shirt, Droplets, Wind, Layers, Sparkles, Home,
   ArrowRight, Clock, Leaf, HeartHandshake, ShieldCheck,
@@ -6,7 +5,7 @@ import {
 import { useScrollReveal } from '@/hooks/useScrollReveal';
 import PageHero from '@/components/PageHero';
 import CTABanner from '@/components/CTABanner';
-import { IMAGES } from '@/data/company';
+import { IMAGES, COMPANY } from '@/data/company';
 
 const cleaningServices = [
   {
@@ -93,10 +92,10 @@ export default function CleaningLaundry() {
                 we handle every detail so you can focus on what matters most.
               </p>
               <div className="mt-8">
-                <Link to="/request-service" className="btn-gold">
+                <a href={COMPANY.requestTel} className="btn-gold">
                   Request Cleaning Service
                   <ArrowRight className="h-4 w-4" />
-                </Link>
+                </a>
               </div>
             </div>
 
@@ -232,7 +231,6 @@ export default function CleaningLaundry() {
         title="Ready for Fresh Starts?"
         subtitle="Book your laundry or cleaning service today. We'll handle the rest — fresh, clean, and convenient."
         primaryLabel="Request Cleaning Service"
-        primaryLink="/request-service"
       />
     </>
   );

@@ -69,9 +69,9 @@ export default function Navbar() {
             <Phone className="h-4 w-4" />
             {COMPANY.phones[0]}
           </a>
-          <Link to="/request-service" className="btn-primary !px-5 !py-2.5">
+          <a href={COMPANY.requestTel} className="btn-primary !px-5 !py-2.5">
             Request a Service
-          </Link>
+          </a>
         </div>
 
         <button
@@ -104,9 +104,9 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
-          <Link to="/request-service" className="btn-primary mt-3 w-full">
+          <a href={COMPANY.requestTel} className="btn-primary mt-3 w-full">
             Request a Service
-          </Link>
+          </a>
           <div className="mt-3 flex flex-col gap-2 border-t border-ink-100 pt-3">
             {COMPANY.phones.map((phone) => (
               <a

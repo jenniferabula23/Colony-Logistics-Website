@@ -1,20 +1,23 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight, MessageCircle } from 'lucide-react';
+import { ArrowRight, MessageCircle, Phone } from 'lucide-react';
 import { COMPANY } from '@/data/company';
 
 interface CTABannerProps {
   title?: string;
   subtitle?: string;
   primaryLabel?: string;
-  primaryLink?: string;
+  /** Internal path (e.g. /contact) or tel:/https: link. Defaults to phone request. */
+  primaryHref?: string;
 }
 
 export default function CTABanner({
   title = "Let's Keep You Moving",
   subtitle = "Whether it's a delivery across town or fresh, clean spaces — The Colony is ready when you are.",
   primaryLabel = 'Request a Service',
-  primaryLink = '/request-service',
+  primaryHref = COMPANY.requestTel,
 }: CTABannerProps) {
+  const isInternal = primaryHref.startsWith('/');
+
   return (
     <section className="relative overflow-hidden">
       <div className="absolute inset-0 bg-brand-gradient" />
@@ -34,10 +37,18 @@ export default function CTABanner({
             className="reveal mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row"
             style={{ transitionDelay: '0.2s' }}
           >
-            <Link to={primaryLink} className="btn-gold">
-              {primaryLabel}
-              <ArrowRight className="h-4 w-4" />
-            </Link>
+            {isInternal ? (
+              <Link to={primaryHref} className="btn-gold">
+                {primaryLabel}
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+            ) : (
+              <a href={primaryHref} className="btn-gold">
+                {!primaryHref.startsWith('mailto:') && <Phone className="h-4 w-4" />}
+                {primaryLabel}
+                <ArrowRight className="h-4 w-4" />
+              </a>
+            )}
             <a
               href={`https://wa.me/${COMPANY.whatsapp}`}
               target="_blank"

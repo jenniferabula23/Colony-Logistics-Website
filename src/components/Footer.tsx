@@ -17,9 +17,9 @@ export default function Footer() {
             <p className="mt-1 text-white/60">Let The Colony handle your logistics and cleaning needs.</p>
           </div>
           <div className="flex flex-wrap items-center gap-3">
-            <Link to="/request-service" className="btn-primary">
+            <a href={COMPANY.requestTel} className="btn-primary">
               Request a Service
-            </Link>
+            </a>
             <a
               href={`https://wa.me/${COMPANY.whatsapp}`}
               target="_blank"
